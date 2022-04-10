@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Google-Glass</title>
+    <link rel="stylesheet" href="_css/estilo.css"/>
+    <link rel="stylesheet" href="_css/form.css"/>
+</head>
+<script language="JavaScript" src="_javascript/funcoes.js"></script>
+<body>
+<div id="interface">
+
+    <header id="cabecalho">
+        <hgroup>
+            <h1>Google Glass</h1>
+            <h2>A revolução do Google está chegando</h2>
+        </hgroup>
+        <img id="icone" src="_imagens/glass-oculos-preto-peq.png"/>
+        <nav id="menu">
+            <h1>Menu Principal</h1>
+            <ul type="disc">
+                <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+                <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+                <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html"> Fotos</a></li>
+                <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+                <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="corpo-full">
+        <article id="noticia-principal">
+            <header id="cabecalho-do-artigo">
+                <hgroup>
+                    <h3>Fale Conosco > Contato</h3>
+                    <h1>Formulário de Contato</h1>
+                    <h2>por Daniel Alves</h2>
+                    <h3 class="direita">Atualizado em 01/Abril/2022</h3>
+                </hgroup>
+            </header>
+        </article>
+    </section>
+
+    <form>
+
+        <fieldset id="usuario"><legend>Identificação do Usuário</legend>
+            <p><label for="cNome">Nome:</label>
+            <input type="text" name="tName" id="cNome" size="35" maxlength="35" placeholder="nome completo"></p>
+            <p><label for="cSenha">Senha:</label>
+            <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"></p>
+            <p><label for="cEmail">E-mail:</label>
+            <input type="email" name="tEmail" id="cEmail" size="35" maxlength="35" placeholder="email"></p>
+        </fieldset>
+
+        <fieldset id="sexo"><legend>sexo</legend>
+        <input type="radio" name="tSexo" id="cMasc"/><label for="cMasc">Masculino</label><br>
+        <input type="radio" name="tSexo" id="cFem"/><label for="cFem">Feminino</label>
+    </fieldset>
+
+    <fieldset>
+            <p><label for="cNasc">Data de Nascimento:</label><input type="date" name="tNasc" id="cNasc"/></p>
+    </fieldset>
+
+    <fieldset id="mensagem" ><legend>Endereço do Usuário</legend>
+        <p><label for="cEnd">Logradouro:</label>
+        <input type="text" name="tEnd" id="cEnd" maxlength="40" placeholder="Rua, Avenida, etc."></p>
+        <p><label for="cNum">Número:</label>
+        <input type="number" name="tNum" id="cNum" min="0" max="9999"></p>
+        <p><label for="cEstado">Estado:</label>
+        <input type="text" name="tEstado" id="cEstado" maxlength="20" placeholder="nome completo do estado"></p>
+        <p><label for="cCidade">Cidade:</label>
+        <input type="text" name="tCidade" id="cCidade" maxlength="20" placeholder="nome da cidade"></p>
+    </fieldset>
+
+    <fieldset id="mensagem1"><legend>Mensagem do Usuário</legend>
+            <p><label for="cUrg">Grau de Urgência:</label>
+            0<input type="range" name="range" id="cUrg" min="0" max="10">10</p>
+            <p><label for="cMsg">Mensagem:</label>
+            <textarea name="tMsg" id="cMsg"></textarea></p>
+    </fieldset>
+
+    <fieldset id="pedido"><legend>Quero um Google Glass</legend>
+            <p><input type="checkbox" name="tPed" id="cPed" checked/>
+            <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+            <p><input type="color" name="tCor" id="cCor" value="#000000"/>
+            <label for="cCor">Cor:</label></p>
+            <p><label for="cQtd">Quantidade:</label>
+            <input type="number" name="tQtd" id="cQtd" min="0" max="5"></p>
+            <p><label for="cPreco">Preço Total: R$</label>
+            <input type="text" name="tPreco" id="cPreco" readonly></p></legend>
+
+    </fieldset>
+
+        <input type="submit" value="Enviar">
+        </form>
+    <footer id="rodape">
+        <p>Copyright &copy 2022 - by Daniel Alves<br/>
+            <a href="http://facebook.com/cursosemvideo" target="_blank">Facebook</a> |
+            <a href="http://twiter.com/cursosemvideo" target="_blank">Twitter</a></p>
+    </footer>
+</div>
+</body>
+</html>
